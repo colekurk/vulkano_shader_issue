@@ -1,0 +1,3 @@
+# Minor alteration of the [Vulkano Mandelbrot example](https://github.com/vulkano-rs/vulkano-www/blob/master/examples/guide-mandelbrot.rs) to demonstrate a bug.
+
+The `vulkano_shaders::shader!` macro currently does not behave as expected with the `path` parameter. Changes to the file at `path` will not be incoporated until something forces a rebuild of the file containing the shader macro (a clean build, or a change to that file).
